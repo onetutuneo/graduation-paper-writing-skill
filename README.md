@@ -3,7 +3,7 @@
 > AI 辅助中文毕业论文写作 Skill，面向交通运输、物流工程、选址、运筹学与机器学习领域。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-green)](https://claude.ai/code)
+[![AI Agent](https://img.shields.io/badge/AI%20Agent-Skill-green)](https://github.com/onetutuneo/graduation-paper-writing-skill)
 [![Domain](https://img.shields.io/badge/Domain-Transportation%20%7C%20Logistics%20%7C%20OR-blue)](https://github.com/)
 
 ---
@@ -12,7 +12,7 @@
 
 > 本 Skill 改自 [Orchestra-Research/AI-Research-SKILLs - ML Paper Writing](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing)，针对中文毕业论文场景进行了全面适配。
 
-`thesis-writer` 是一个专为 Claude Code 设计的 AI 辅助论文写作 Skill，专注于中文毕业论文写作。它在原版 ML 顶会论文写作 Skill 的基础上，综合了顶尖研究者（Neel Nanda、Sebastian Farquhar、Karpathy 等）的写作哲学，并针对中文学术写作规范进行了深度适配。
+`thesis-writer` 是一个 AI 辅助论文写作 Skill，专注于中文毕业论文写作，适用于 Claude Code、Cursor、Windsurf 等支持 SKILL.md 格式的 AI 编程助手。它在原版 ML 顶会论文写作 Skill 的基础上，综合了顶尖研究者（Neel Nanda、Sebastian Farquhar、Karpathy 等）的写作哲学，并针对中文学术写作规范进行了深度适配。
 
 **核心特点**：
 
@@ -63,7 +63,7 @@
 
 ### 前置要求
 
-- [Claude Code](https://claude.ai/code) 或兼容的 AI 编程助手
+- 支持 SKILL.md 的 AI 编程助手（[Claude Code](https://claude.ai/code)、[Cursor](https://cursor.sh)、[Windsurf](https://codeium.com/windsurf) 等）
 - LaTeX 环境（推荐 TeX Live 或 MiKTeX）
 - 中文字体支持
 
@@ -78,7 +78,7 @@ git clone https://github.com/onetutuneo/graduation-paper-writing-skill.git
 2. **将 Skill 复制到你的项目**
 
 ```bash
-# 复制到 Claude Code 项目目录
+# 复制到项目目录
 cp -r thesis-writer /path/to/your/project/.agents/skills/thesis-writer
 ```
 
@@ -90,7 +90,7 @@ cd /path/to/your/project/
 mkdir -p templates examples paper_output
 ```
 
-4. **重启 Claude Code**
+4. **重启 AI 助手**
 
 Skill 会在下次对话时自动加载。
 
@@ -122,7 +122,7 @@ cp research-notes.md examples/wsaa-benders/
 
 ### 第三步：触发 Skill
 
-在 Claude Code 中，使用以下任一方式触发：
+在 AI 助手中，使用以下任一方式触发：
 
 ```
 写论文，使用模板 thesis
@@ -401,7 +401,7 @@ A: 在项目根目录的 `templates/` 下创建新子目录，放入完整的 La
 
 ### Q: 可以在多个项目中使用同一个 Skill 吗？
 
-A: 可以。Skill 安装在每个项目的 `.agents/skills/` 目录下，各项目的 Skill 独立。
+A: 可以。Skill 安装在每个项目的 `.agents/skills/` 或 `.claude/skills/` 目录下，各项目的 Skill 独立。
 
 ### Q: 支持哪些 LaTeX 发行版？
 
