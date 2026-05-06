@@ -1,0 +1,136 @@
+\setlength{\baselineskip}{20pt}
+
+\chapter{1级标题}
+\label{cha:chap2}
+
+学位论文为了需要反映出作者确已掌握了坚实的基础理论和系统的专门知识，具有开阔的科学视野，对研究方案作了充分论证，因此，有关历史回顾和前人工作的综合评述，以及理论分析等，可以单独成章，用足够的文字叙述。正文是学位论文的核心部分，占主要篇幅，可以包括：调查对象、实验和观测方法、仪器设备、材料原料、实验和观测结果、计算方法和编程原理、数据资料、经过加工整理的图表、形成的论点和导出的结论等。
+
+由于研究工作涉及的学科、选题、研究方法、工作进程、结果表达方式等有很大的差异，对正文内容不能作统一的规定。但是，必须实事求是，客观真切，准确完备，合乎逻辑，层次分明，简练可读。
+
+
+\textcolor{red}{\bf 图：}
+
+图包括曲线图、构造图、示意图、框图、流程图、记录图、地图、照片等。
+
+图应具有“自明性”。
+
+图应有编号。图的编号由“图”和从“1”开始的阿拉伯数字组成，图较多时，可分章编号。
+
+图宜有图题，图题即图的名称，置于图的编号之后。图的编号和图题应置于图下方。
+
+照片图要求主题和主要显示部分的轮廓鲜明，便于制版。如用放大缩小的复制品，必须清晰，反差适中。照片上应有表示目的物尺寸的标度。
+
+图片示例1：
+\begin{figure}[!htb] 
+  \centering
+  \includegraphics[ width=.9\textwidth]{figures/MPNN.pdf}
+  \caption{图神经网络中的消息传递机制}
+  \label{fig:base:mp}
+\end{figure}
+
+\textcolor{red}{\bf 表：}
+
+表应具有“自明性”。
+
+表应有编号。表的编号由“表”和从“1”开始的阿拉伯数字组成，表较多时，可分章编号。
+
+表宜有表题，表题即表的名称，置于表的编号之后。表的编号和表题应置于表上方。
+
+表的编排，一般是内容和测试项目由左至右横读，数据依序竖读。
+
+表的编排建议采用国际通行的三线表。
+
+如某个表需要转页接排，在随后的各页上应重复表的编号。编号后跟表题（可省略）和“（续）”，置于表上方。
+
+续表均应重复表头。
+
+表格示例1：
+
+\begin{table}[!htb]\small   %%\small是为了设置表格中的字体比正文小
+\setlength\tabcolsep{15pt} %调整列间距
+  \centering
+  \caption{数据集}
+
+ \begin{tabular}{c c c c c c}
+  \toprule[1.5pt]
+  No. &$N_{\rm T}$ &$K$ &${P_{\rm Max}}$ & 样本数& 类型\\
+  \midrule[1pt]
+    1   &  4   & 2 & 1 & 102,000&  A    \\
+    2   &  8   & 3 & 1 & 102,000&  A    \\
+    3   &  16   & 8 & 1 & 102,000&  A  \\
+    4   &  8   & 2 & 1 & 2,000&  B  \\
+    5   &  8   & 4 & 1 & 2,000&  B  \\
+    6   &  16   & 7 & 1 & 2,000&  B  \\
+    7   &  16   & 8 & 1 & 2,000&  B  \\
+  \bottomrule[1.5pt]
+  \end{tabular}
+   \begin{tablenotes}
+        \footnotesize
+            \item {类型A：包含训练集、验证集和测试集。}
+            \item {类型B：仅包含测试集。}
+    \end{tablenotes}
+  \label{table:ee:dataset}
+\end{table}
+
+\textcolor{red}{\bf 公式：}
+
+论文中的公式应另行起，并缩格书写，与周围文字留足够的空间区分开。
+
+如有两个以上的公式，应用从“1”开始的阿拉伯数字进行编号，并将编号置于括号内。公式的编号右端对齐，公式与编号之间可用“…”连接。公式较多时，可分章编号。
+
+公式示例1：
+\begin{flalign}
+    {{\alpha }_{i,j}^{(l)}}=\frac{\exp \left( \text{LeakyReLU}\left( {\mathbf{a}^{(l)}}^{\top }{{{\bm \Theta }}^{(l)}}{{\mathbf{x}}_{i}}^{(l)}+{\mathbf{a}^{(l)}}^{\top }{{{\bm \Theta }}^{(l)}}{{\mathbf{x}}_{j}}^{(l)} \right) \right)}{\sum\limits_{k\in \mathcal{N}(i)\cup \{i\}}{\exp }\left( \text{LeakyReLU}\left( {\mathbf{a}^{(l)}}^{\top }{{{\bm \Theta }}^{(l)}}{{\mathbf{x}}_{i}}^{(l)}+{\mathbf{a}^{(l)}}^{\top }{{{\bm \Theta }}^{(l)}}{{\mathbf{x}}_{k}}^{(l)} \right) \right)},
+\end{flalign}
+其中，$ {\bf a}^{(l)}$是第$l$层图注意力层注意力机制的可学习参数。
+
+较长的公式需要转行时，应尽可能在“$＝$”处回行，或者在“$+$”、“$－$”、“$\times$”、“$/$”等记号处回行。
+
+公式中分数线的横线，其长度应等于或略大于分子和分母中较长的一方。
+
+如正文中书写分数，应尽量将其高度降低为一行。如将分数线书写为“/”，将根号改为负指数。
+
+公式示例2：
+
+将$\frac{1}{\sqrt{2}}$写成$1/\sqrt{2}$或$2^{-1/2}$。
+
+\textcolor{red}{\bf 引文标注:}
+
+论文中引用的文献的标注方法遵照GB/T 7714--2005，可采用顺序编码制，也可采用著者--出版年制，但全文必须统一。
+
+\textcolor{red}{\bf 注释:}
+
+当论文中的字、词或短语，需要进一步加以说明，而又没有具体的文献来源时，用注释。注释一般在社会科学中用得较多。
+
+应控制论文中的注释数量，不宜过多。
+
+由于论文篇幅较长，建议采用文中编号加“脚注”的方式。最好不用采用文中编号加“尾注”。
+
+
+\textcolor{red}{\bf 算法：}
+
+\begin{algorithm}[ht]
+    \caption{基于PM的无监督学习算法}
+    \label{alg:PM}
+    \renewcommand{\algorithmicrequire}{\textbf{输入:}}
+    \renewcommand{\algorithmicensure}{\textbf{输出:}}
+\begin{algorithmic}[1]
+    \REQUIRE 训练集 $\mathcal{D}=\left\{\mathbf{H}_{n}\right\}_{n=1}^M$\;  %%input
+    \ENSURE 训练后的 $\bm\theta$;    %%output
+    % 开始行数
+    \STATE 初始化 $\bm\theta$\;
+     \FOR{ epoch $e \in [0,1,\dots,E] $}
+        \FOR{  minibatch $b \in [0,1,\dots,B] $}
+            \STATE 采样第 $b$ 个 minibatch $ \left\{\mathbf{H}^{(n)}\right\}_{n=1}^N$\;
+            \STATE 通过 $\widehat{\mathbf{W}}^{(n)} = {\rm CRGAT}\left({\bf H}_{n}\right)$ 计算相应的波束形成矩阵 $ \left\{{\widehat{\mathbf{W}}}^{(n)}\right\}_{n=1}^N$，对于所有的$n$\;
+            \STATE 更新 $\bm{\theta}$\;
+        \ENDFOR       
+      \ENDFOR
+    \RETURN $\bm\theta$.
+\end{algorithmic}
+\end{algorithm}
+
+
+\section{2级标题}
+
+\subsection{3级标题}

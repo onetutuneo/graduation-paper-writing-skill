@@ -1,0 +1,70 @@
+\documentclass{BJTU-thesis} 
+\usepackage[T1]{fontenc}  %设置英文字体为times new roman
+\usepackage{mathptmx}
+\usepackage{xeCJK}
+\usepackage{xeCJKfntef}
+ \usepackage{url}
+ \usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage{algorithm} 
+\usepackage{algorithmic}
+\usepackage{diagbox}
+\usepackage[justification=centering]{caption}
+
+\makeatletter
+\renewcommand{\ALG@name}{算法}
+\makeatother
+
+%%%%%%%%%%%%%%%%%填写封面信息%%%%%%%%%%%%%%%%%%%%%%%%
+\title{论文（设计）中文题目}%论文题目
+\englishtitle{论文（设计）英文题目} %论文题目英文
+
+\school{输入学院名称}%学院
+\major{输入专业名称}%专业
+\author{输入姓名}%作者姓名
+\studentNumber{输入学号}%作者学号
+\advisor{输入指导教师姓名}%指导教师
+\datetime{2026年6月} %编辑日期
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setmainfont{Times New Roman}
+
+\begin{document}
+	\makecover 
+    \newpage 
+    \thispagestyle{empty}
+    \mbox{}  
+    \newpage
+	\makeAuthorization 
+    \Statement
+    \newpage
+    \pagenumbering{Roman}
+
+    \pagestyle{abstractheading}
+    \include{chapters/abstract}%中文摘要
+    \include{chapters/englishabstract}%英文摘要
+    \addcontentsline{toc}{chapter}{目\hspace{2em}录}
+    \tableofcontents
+    \newpage\pagenumbering{arabic}
+%【注意！】以上内容不要修改
+
+
+     %正文部分
+    \pagestyle{Newheading}
+    \include{chapters/chapter01}%引言
+    \include{chapters/chapter02}%第二章
+    \include{chapters/chapter03}%第三章
+    \include{chapters/chapter04}%第四章
+    \include{chapters/chapter05}%第五章
+
+    
+    \newpage\pagestyle{abstractheading}
+	%\nocite{*}
+	\bibliography{reference/ref}%参考文献
+
+	\include{chapters/thanks}%致谢部分
+     
+
+    \input{chapters/appendix}
+					
+\end{document}
